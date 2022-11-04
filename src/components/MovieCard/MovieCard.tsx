@@ -1,13 +1,14 @@
-import React from 'react';
+import { FC } from 'react';
 import { Movie } from '../../types/Movie';
 
 import './MovieCard.scss';
 
-type Props = {
+interface Props {
   movie: Movie;
-};
+}
 
-export const MovieCard: React.FC<Props> = ({ movie }) => {
+export const MovieCard: FC<Props> = (props) => {
+  const { movie } = props;
   const {
     title,
     description,
